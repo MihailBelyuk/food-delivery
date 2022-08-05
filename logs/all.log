@@ -1,0 +1,361 @@
+2022-08-03 10:14:45.159 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Odometer value is out of permitted bounds.
+2022-08-03 10:14:45.162 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 10:14:45.163 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 10:14:45.178 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 18.0 minutes
+2022-08-03 10:14:45.179 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 14
+2022-08-03 10:14:45.180 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 10:14:45.182 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 9.80
+2022-08-03 10:14:45.185 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 10:14:45.185 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 10:14:45.186 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 10:14:45.186 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:14:45.186 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Negative quantity exception caught.
+2022-08-03 10:14:45.187 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:14:45.187 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:14:45.188 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:14:45.194 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 10:14:45.195 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 10:15:57.863 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Odometer value is out of permitted bounds.
+2022-08-03 10:15:57.869 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 10:15:57.870 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 10:15:57.918 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 18.0 minutes
+2022-08-03 10:15:57.920 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 14
+2022-08-03 10:15:57.922 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 10:15:57.924 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 9.80
+2022-08-03 10:15:57.927 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 10:15:57.930 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 10:15:57.931 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 10:15:57.932 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:15:57.933 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Negative quantity exception caught.
+2022-08-03 10:15:57.934 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:15:57.935 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:15:57.935 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:15:57.953 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 10:15:57.953 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 10:23:32.461 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Odometer value is out of permitted bounds.
+2022-08-03 10:23:32.468 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Odometer value is out of permitted bounds.
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: null
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:58) ~[solvd-laba/:?]
+2022-08-03 10:23:32.489 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 10:23:32.489 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 10:23:32.512 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 18.0 minutes
+2022-08-03 10:23:32.513 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 14
+2022-08-03 10:23:32.515 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 10:23:32.517 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 9.80
+2022-08-03 10:23:32.520 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 10:23:32.521 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 10:23:32.522 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 10:23:32.522 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:23:32.523 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Negative quantity exception caught.
+2022-08-03 10:23:32.525 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:23:32.525 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:23:32.526 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:23:32.536 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 10:23:32.537 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 10:24:46.769 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Odometer value is out of permitted bounds.
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:33) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:58) ~[solvd-laba/:?]
+2022-08-03 10:24:46.797 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 10:24:46.797 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 10:24:46.833 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 18.0 minutes
+2022-08-03 10:24:46.835 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 14
+2022-08-03 10:24:46.838 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 10:24:46.841 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 9.80
+2022-08-03 10:24:46.845 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 10:24:46.847 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 10:24:46.847 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 10:24:46.847 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:24:46.847 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Negative quantity exception caught.
+2022-08-03 10:24:46.849 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:24:46.849 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:24:46.851 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:24:46.863 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 10:24:46.863 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 10:26:31.198 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 10:26:31.202 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:58) ~[solvd-laba/:?]
+2022-08-03 10:26:31.219 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 10:26:31.219 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 10:26:31.235 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 18.0 minutes
+2022-08-03 10:26:31.237 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 14
+2022-08-03 10:26:31.238 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 10:26:31.239 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 9.80
+2022-08-03 10:26:31.245 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 10:26:31.248 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 10:26:31.248 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 10:26:31.249 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:26:31.250 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Negative quantity exception caught.
+2022-08-03 10:26:31.251 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:26:31.252 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:26:31.253 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:26:31.262 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 10:26:31.262 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 10:57:48.846 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 10:57:48.861 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:65) ~[solvd-laba/:?]
+2022-08-03 10:57:48.883 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 10:57:48.883 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 10:57:48.883 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 10:57:48.915 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 10:57:48.915 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59
+2022-08-03 10:57:48.915 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 10:57:48.915 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 10:57:48.915 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Negative quantity exception caught.
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Nuggets is/are prepared.
+2022-08-03 10:57:48.930 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Strips is/are prepared.
+2022-08-03 11:00:40.220 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:00:40.220 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:65) ~[solvd-laba/:?]
+2022-08-03 11:00:40.242 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:00:40.242 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:00:40.242 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Negative quantity exception caught.
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:00:40.273 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:00:40.289 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Nuggets is/are prepared.
+2022-08-03 11:00:40.289 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Strips is/are prepared.
+2022-08-03 11:02:55.647 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:02:55.650 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:65) ~[solvd-laba/:?]
+2022-08-03 11:02:55.663 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:02:55.663 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:02:55.664 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:02:55.679 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:02:55.680 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:02:55.682 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:02:55.683 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:02:55.686 [main] INFO  com.solvd.belyuk.fooddelivery.Main - P-2Y-2M-22D
+2022-08-03 11:02:55.687 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:02:55.687 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:02:55.687 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:02:55.689 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:02:55.689 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:02:55.689 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:02:55.689 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:02:55.690 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Nuggets is/are prepared.
+2022-08-03 11:02:55.690 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Strips is/are prepared.
+2022-08-03 11:05:44.837 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:05:44.842 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:65) ~[solvd-laba/:?]
+2022-08-03 11:05:44.862 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:05:44.862 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:05:44.863 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:05:44.883 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:05:44.888 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:05:44.891 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:05:44.892 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:05:44.895 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D years.
+2022-08-03 11:05:44.895 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:05:44.896 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:05:44.897 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:05:44.900 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:05:44.900 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:05:44.901 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:05:44.902 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:05:44.902 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Nuggets is/are prepared.
+2022-08-03 11:05:44.903 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Strips is/are prepared.
+2022-08-03 11:06:16.522 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:06:16.525 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:65) ~[solvd-laba/:?]
+2022-08-03 11:06:16.540 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:06:16.540 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:06:16.540 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:06:16.561 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:06:16.563 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:06:16.564 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:06:16.565 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:06:16.568 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D years.
+2022-08-03 11:06:16.569 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:06:16.571 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:06:16.572 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:06:16.573 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:06:16.574 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:06:16.575 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:06:16.575 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:06:16.576 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Nuggets is/are prepared.
+2022-08-03 11:06:16.576 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Strips is/are prepared.
+2022-08-03 11:07:42.015 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:07:42.021 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:65) ~[solvd-laba/:?]
+2022-08-03 11:07:42.037 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:07:42.037 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:07:42.037 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:07:42.058 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:07:42.059 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:07:42.061 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:07:42.062 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:07:42.065 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D
+2022-08-03 11:07:42.066 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:07:42.066 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:07:42.067 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of couriers working in delivery.3
+2022-08-03 11:07:42.068 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:07:42.069 [main] INFO  com.solvd.belyuk.fooddelivery.Main - 3
+2022-08-03 11:07:42.070 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:07:42.070 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:07:42.071 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Nuggets is/are prepared.
+2022-08-03 11:07:42.071 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Strips is/are prepared.
+2022-08-03 11:09:09.932 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:09:09.936 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:65) ~[solvd-laba/:?]
+2022-08-03 11:09:09.956 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:09:09.957 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:09:09.957 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:09:09.980 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:09:09.985 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:09:09.986 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:09:09.989 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:09:09.993 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D
+2022-08-03 11:09:09.994 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:09:09.995 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:09:09.996 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of couriers working in delivery.3
+2022-08-03 11:09:10.000 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:09:10.000 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of dishes in restaurant menu.3
+2022-08-03 11:09:10.001 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:09:10.001 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:09:10.002 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Nuggets is/are prepared.
+2022-08-03 11:09:10.003 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Strips is/are prepared.
+2022-08-03 11:10:33.120 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:10:33.129 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:64) ~[solvd-laba/:?]
+2022-08-03 11:10:33.144 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:10:33.144 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:10:33.145 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:10:33.167 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:10:33.169 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:10:33.170 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:10:33.171 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:10:33.174 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D
+2022-08-03 11:10:33.174 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:10:33.174 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:10:33.175 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of couriers working in delivery.3
+2022-08-03 11:10:33.176 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:10:33.177 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of dishes in restaurant menu.3
+2022-08-03 11:10:33.178 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:10:33.178 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:10:33.187 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 11:10:33.187 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 11:45:37.162 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:45:37.172 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:64) ~[solvd-laba/:?]
+2022-08-03 11:45:37.192 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:45:37.192 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:45:37.192 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:45:37.222 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:45:37.230 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:45:37.230 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:45:37.232 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:45:37.232 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D
+2022-08-03 11:45:37.232 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:45:37.232 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:45:37.232 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of couriers working in delivery.3
+2022-08-03 11:45:37.242 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:45:37.242 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of dishes in restaurant menu.3
+2022-08-03 11:45:37.242 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:45:37.242 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:45:37.242 [main] INFO  com.solvd.belyuk.fooddelivery.TryWithResourceClass - Resource closed.
+2022-08-03 11:45:37.282 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 11:45:37.282 [main] INFO  com.solvd.belyuk.fooddelivery.TryWithResourceClass - Resource closed.
+2022-08-03 11:45:37.282 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 11:45:37.282 [main] INFO  com.solvd.belyuk.fooddelivery.TryWithResourceClass - Resource closed.
+2022-08-03 11:48:25.476 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:48:25.476 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:64) ~[solvd-laba/:?]
+2022-08-03 11:48:25.492 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:48:25.492 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:48:25.492 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:48:25.507 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:48:25.507 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:48:25.507 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of couriers working in delivery.3
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of dishes in restaurant menu.3
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:48:25.523 [main] INFO  com.solvd.belyuk.fooddelivery.TryWithResourceClass - Resource closed.
+2022-08-03 11:48:25.538 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 11:48:25.538 [main] INFO  com.solvd.belyuk.fooddelivery.TryWithResourceClass - Resource closed.
+2022-08-03 11:48:25.538 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 11:48:25.538 [main] INFO  com.solvd.belyuk.fooddelivery.TryWithResourceClass - Resource closed.
+2022-08-03 11:49:21.665 [main] ERROR com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Threw 'TooBigValueException'.
+2022-08-03 11:49:21.681 [main] ERROR com.solvd.belyuk.fooddelivery.Main - Caught 'TooBigValueException'. 
+com.solvd.belyuk.fooddelivery.exception.TooBigValueException: Odometer value is out of permitted bounds.
+	at com.solvd.belyuk.fooddelivery.entity.vehicle.Car.changeOil(Car.java:34) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.service.VehicleService.changeOil(VehicleService.java:11) ~[solvd-laba/:?]
+	at com.solvd.belyuk.fooddelivery.Main.main(Main.java:64) ~[solvd-laba/:?]
+2022-08-03 11:49:21.697 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Set default value for the odometer in finally block.
+2022-08-03 11:49:21.697 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Car - Change air filter as soon as possible.
+2022-08-03 11:49:21.697 [main] INFO  com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle - Repair is NOT needed.
+2022-08-03 11:49:21.719 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order delivery time: 58.0 minutes
+2022-08-03 11:49:21.719 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price: 59.00
+2022-08-03 11:49:21.719 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Client age: 63
+2022-08-03 11:49:21.719 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Order price with discount: 41.30
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Working period: P-2Y-2M-22D
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Zhenya 2000-04-19
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.service.DeliveryService - Hugh Laurie 1959-06-11
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of couriers working in delivery.3
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant - Amount of dishes: 3
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.Main - Number of dishes in restaurant menu.3
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:49:21.734 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - Hot wings is/are prepared.
+2022-08-03 11:49:21.750 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Nuggets
+2022-08-03 11:49:21.750 [main] INFO  com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish - There is/are no Chicken meat to prepare the Strips
+2022-08-03 11:49:21.750 [main] INFO  com.solvd.belyuk.fooddelivery.TryWithResourceClass - Resource closed.
