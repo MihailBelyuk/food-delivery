@@ -11,6 +11,7 @@ import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
 import com.solvd.belyuk.fooddelivery.entity.person.Employee;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.Car;
+import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.WvGolf;
 import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 import com.solvd.belyuk.fooddelivery.exception.WrongAgeException;
@@ -107,6 +108,7 @@ public class Main {
         } catch (WrongAgeException e) {
             LOGGER.error("Wrong age result.", e);
         }
+        Vehicle car4 = new Car("Nissan Skyline",10000);
     }
 }
 
