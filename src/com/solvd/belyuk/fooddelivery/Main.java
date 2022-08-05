@@ -110,6 +110,7 @@ public class Main {
         }
 
         Vehicle car2= new Car("Mitsubishi Lancer EVO X",15000);
+        Vehicle car3 = new Car("Subaru WRX STI",20000);
     }
 }
 
