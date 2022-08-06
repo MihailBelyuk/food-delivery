@@ -17,6 +17,7 @@ import java.math.RoundingMode;
 public class DeliveryService {
 
     private static final Logger LOGGER = LogManager.getLogger(DeliveryService.class);
+
     private static final int MINUTES_IN_HOUR = 60;
 
     public static double countDeliveryTime(Delivery delivery) {

@@ -1,6 +1,7 @@
 package com.solvd.belyuk.fooddelivery.exception;
 
 public class TooBigValueException extends Exception {
+
     public TooBigValueException() {
         super();
     }

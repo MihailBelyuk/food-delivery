@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 
 public abstract class Human implements ICountTimePeriod {
 
-    private String name;
-    private LocalDate dateOfBirth;
     private Address address;
+    private LocalDate dateOfBirth;
+    private String name;
 
     public Human(String name, LocalDate dateOfBirth) {
         this.name = name;

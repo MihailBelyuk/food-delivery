@@ -2,8 +2,8 @@ package com.solvd.belyuk.fooddelivery.service;
 
 import com.solvd.belyuk.fooddelivery.entity.vehicle.IDoService;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.IRepair;
-import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
+import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 
 public class VehicleService {
 
@@ -11,10 +11,11 @@ public class VehicleService {
         iDoService.changeOil();
     }
 
-    public static void changeAirFilter(IDoService iDoService){
+    public static void changeAirFilter(IDoService iDoService) {
         iDoService.changeAirFilter();
     }
-    public static void checkIfRepairIsNeeded(IRepair iRepair){
+
+    public static void checkIfRepairIsNeeded(IRepair iRepair) {
         Vehicle vehicle = (Vehicle) iRepair;
         vehicle.checkIfNeedsRepair();
     }

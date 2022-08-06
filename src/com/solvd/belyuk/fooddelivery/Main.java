@@ -59,7 +59,7 @@ public class Main {
         courier.setCar(new WvGolf("WV Golf", 30_000));
         Car car = courier.getCar();
         car.setOdometerCurrent(1000_000_000);
-        car.setNextAirFilterService(45000);
+        car.setNextAirFilterService(45_000);
 
         try {
             VehicleService.changeOil(car);
@@ -108,9 +108,9 @@ public class Main {
         } catch (WrongAgeException e) {
             LOGGER.error("Wrong age result.", e);
         }
-        Vehicle car4 = new Car("Nissan Skyline",10000);
-        Vehicle car2= new Car("Mitsubishi Lancer EVO X",15000);
-        Vehicle car3 = new Car("Subaru WRX STI",20000);
+        Vehicle car2 = new Car("Mitsubishi Lancer EVO X", 15_000);
+        Vehicle car3 = new Car("Subaru WRX STI", 20_000);
+        Vehicle car4 = new Car("Nissan Skyline", 10_000);
     }
 }
 
