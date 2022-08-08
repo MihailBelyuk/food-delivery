@@ -3,7 +3,7 @@ package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.ingred
 public abstract class Ingredient {
 
     private String name;
-    private boolean isPresent;
+    private boolean present;
 
     public Ingredient(String name) {
         this.name = name;
@@ -18,11 +18,11 @@ public abstract class Ingredient {
     }
 
     public boolean isPresent() {
-        return isPresent;
+        return present;
     }
 
     public void setPresent(boolean present) {
-        isPresent = present;
+        this.present = present;
     }
 
     @Override
@@ -32,14 +32,14 @@ public abstract class Ingredient {
 
         Ingredient that = (Ingredient) o;
 
-        if (isPresent != that.isPresent) return false;
+        if (present != that.present) return false;
         return name != null ? name.equals(that.name) : that.name == null;
     }
 
     @Override
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
-        result = 31 * result + (isPresent ? 1 : 0);
+        result = 31 * result + (present ? 1 : 0);
         return result;
     }
 
@@ -47,7 +47,7 @@ public abstract class Ingredient {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Ingredient{");
         sb.append("name='").append(name).append('\'');
-        sb.append(", isPresent=").append(isPresent);
+        sb.append(", isPresent=").append(present);
         sb.append('}');
         return sb.toString();
     }

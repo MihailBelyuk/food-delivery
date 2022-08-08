@@ -40,7 +40,7 @@ public class DeliveryService {
         Order order = orders[0];
         BigDecimal orderPrice = new BigDecimal(0);
         for (Dish dish : order.getDishes()) {
-            BigDecimal dishSetPrice = dish.getDishPrice().multiply(new BigDecimal(dish.getDishQuantity()));
+            BigDecimal dishSetPrice = dish.getPrice().multiply(new BigDecimal(dish.getDishQuantity()));
             orderPrice = orderPrice.add(dishSetPrice);
         }
         return orderPrice.setScale(2, RoundingMode.CEILING);
