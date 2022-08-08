@@ -17,6 +17,7 @@ import java.math.RoundingMode;
 public class DeliveryService {
 
     private static final Logger LOGGER = LogManager.getLogger(DeliveryService.class);
+
     private static final int MINUTES_IN_HOUR = 60;
 
     public static double countDeliveryTime(Delivery delivery) {
@@ -39,7 +40,7 @@ public class DeliveryService {
         Order order = orders[0];
         BigDecimal orderPrice = new BigDecimal(0);
         for (Dish dish : order.getDishes()) {
-            BigDecimal dishSetPrice = dish.getDishPrice().multiply(new BigDecimal(dish.getDishQuantity()));
+            BigDecimal dishSetPrice = dish.getPrice().multiply(new BigDecimal(dish.getDishQuantity()));
             orderPrice = orderPrice.add(dishSetPrice);
         }
         return orderPrice.setScale(2, RoundingMode.CEILING);

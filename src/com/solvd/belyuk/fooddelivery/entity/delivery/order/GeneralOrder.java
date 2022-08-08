@@ -22,7 +22,7 @@ public class GeneralOrder extends Order {
     public BigDecimal countOrderPriceWithDiscount(Dish[] dishes) {
         BigDecimal orderPrice = new BigDecimal(0);
         for (Dish dish : dishes) {
-            BigDecimal dishPrice = dish.getDishPrice().multiply(new BigDecimal(dish.getDishQuantity()));
+            BigDecimal dishPrice = dish.getPrice().multiply(new BigDecimal(dish.getDishQuantity()));
             if (dishPrice.compareTo(new BigDecimal(0)) < 0) {
                 LOGGER.error("Price value is negative.");
                 throw new NegativePriceValueException("Price value is negative.");

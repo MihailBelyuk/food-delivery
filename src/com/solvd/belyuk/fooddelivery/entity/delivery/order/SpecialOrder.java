@@ -20,7 +20,7 @@ public class SpecialOrder extends Order {
         int totalDiscount = getDiscount() + getVipClientDiscount();
         BigDecimal orderPrice = new BigDecimal(0);
         for (Dish dish : dishes) {
-            BigDecimal dishPrice = dish.getDishPrice().multiply(new BigDecimal(dish.getDishQuantity()));
+            BigDecimal dishPrice = dish.getPrice().multiply(new BigDecimal(dish.getDishQuantity()));
             orderPrice = orderPrice.add(dishPrice);
         }
         BigDecimal discount = new BigDecimal(totalDiscount).divide(new BigDecimal(100));

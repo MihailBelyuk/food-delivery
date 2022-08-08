@@ -6,8 +6,8 @@ import java.time.LocalDate;
 
 public class Courier extends Employee {
 
-    private String courierType;
     private Car car;
+    private String courierType;
 
     public Courier(String name, LocalDate dateOfBirth) {
         super(name, dateOfBirth);

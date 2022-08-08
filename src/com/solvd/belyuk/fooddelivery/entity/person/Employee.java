@@ -6,8 +6,8 @@ import java.time.Period;
 
 public class Employee extends Human {
 
-    private long employeeId;
     private LocalDate hiringDate;
+    private long employeeId;
 
     public Employee(String name, LocalDate dateOfBirth) {
         super(name, dateOfBirth);
