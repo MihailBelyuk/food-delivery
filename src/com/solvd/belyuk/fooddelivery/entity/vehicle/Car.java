@@ -8,8 +8,8 @@ public class Car extends Vehicle implements IDoService {
 
     private static final Logger LOGGER = LogManager.getLogger(Car.class);
 
-    private static final int OIL_SERVICE_PERIOD = 15000;
-    private static final int AIR_FILTER_SERVICE_PERIOD = 30000;
+    private static final int OIL_SERVICE_PERIOD = 15_000;
+    private static final int AIR_FILTER_SERVICE_PERIOD = 30_000;
 
     private int horsePower;
     private int fuelConsumption;
