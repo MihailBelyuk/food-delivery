@@ -1,4 +1,4 @@
-package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype;
+package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish;
 
 public class Hamburger extends Dish {
 

@@ -1,6 +1,6 @@
 package com.solvd.belyuk.fooddelivery.exception;
 
-public class WrongAgeException extends Exception{
+public class WrongAgeException extends Exception {
 
     public WrongAgeException() {
         super();

@@ -1,6 +1,11 @@
 package com.solvd.belyuk.fooddelivery.entity.vehicle;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Bicycle extends Vehicle {
+
+    private static final Logger LOGGER = LogManager.getLogger(Bicycle.class);
 
     private String size;
 
@@ -37,5 +42,10 @@ public class Bicycle extends Vehicle {
         sb.append("size='").append(size).append('\'');
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public void replace(SparePart sparePart) {
+        LOGGER.info(sparePart.getClass().getName() + " " + sparePart.getBrand() + " has been replaced.");
     }
 }

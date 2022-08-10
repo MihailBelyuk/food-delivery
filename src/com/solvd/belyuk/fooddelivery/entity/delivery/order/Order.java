@@ -1,28 +1,29 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.order;
 
 import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
+import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Arrays;
+import java.util.List;
 
 public abstract class Order {
 
     private static long orderNumber;
 
-    private Restaurant restaurant;
-    private Courier courier;
+    private Courier<CourierType> courier;
     private Client client;
+    private List<Dish> dishes;
+    private Restaurant restaurant;
     private Payment payment;
-    private Dish[] dishes;
     private LocalDateTime creationTime;
     private int deliveryDistance;
     private int discount;
 
-    public Order(Courier courier,
+    public Order(Courier<CourierType> courier,
                  Client client,
                  int deliveryDistance) {
         this.courier = courier;
@@ -33,11 +34,11 @@ public abstract class Order {
         orderNumber++;
     }
 
-    public Dish[] getDishes() {
+    public List<Dish> getDishes() {
         return dishes;
     }
 
-    public void setDishes(Dish[] dishes) {
+    public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
     }
 
@@ -49,17 +50,17 @@ public abstract class Order {
         this.restaurant = restaurant;
     }
 
-    public abstract BigDecimal countOrderPriceWithDiscount(Dish[] dishes);
+    public abstract BigDecimal countOrderPriceWithDiscount(List<Dish> dishes);
 
     public static long getOrderNumber() {
         return orderNumber;
     }
 
-    public Courier getCourier() {
+    public Courier<CourierType> getCourier() {
         return courier;
     }
 
-    public void setCourier(Courier courier) {
+    public void setCourier(Courier<CourierType> courier) {
         this.courier = courier;
     }
 
@@ -116,8 +117,7 @@ public abstract class Order {
         if (courier != null ? !courier.equals(order.courier) : order.courier != null) return false;
         if (client != null ? !client.equals(order.client) : order.client != null) return false;
         if (payment != null ? !payment.equals(order.payment) : order.payment != null) return false;
-        // Probably incorrect - comparing Object[] arrays with Arrays.equals
-        if (!Arrays.equals(dishes, order.dishes)) return false;
+        if (dishes != null ? !dishes.equals(order.dishes) : order.dishes != null) return false;
         return creationTime != null ? creationTime.equals(order.creationTime) : order.creationTime == null;
     }
 
@@ -127,7 +127,7 @@ public abstract class Order {
         result = 31 * result + (courier != null ? courier.hashCode() : 0);
         result = 31 * result + (client != null ? client.hashCode() : 0);
         result = 31 * result + (payment != null ? payment.hashCode() : 0);
-        result = 31 * result + Arrays.hashCode(dishes);
+        result = 31 * result + (dishes != null ? dishes.hashCode() : 0);
         result = 31 * result + (creationTime != null ? creationTime.hashCode() : 0);
         result = 31 * result + deliveryDistance;
         result = 31 * result + discount;
@@ -141,7 +141,7 @@ public abstract class Order {
         sb.append(", courier=").append(courier);
         sb.append(", client=").append(client);
         sb.append(", payment=").append(payment);
-        sb.append(", dishes=").append(Arrays.toString(dishes));
+        sb.append(", dishes=").append(dishes);
         sb.append(", creationTime=").append(creationTime);
         sb.append(", deliveryDistance=").append(deliveryDistance);
         sb.append(", discount=").append(discount);

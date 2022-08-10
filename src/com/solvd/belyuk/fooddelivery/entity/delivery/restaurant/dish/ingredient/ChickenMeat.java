@@ -1,4 +1,4 @@
-package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.ingredient;
+package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.ingredient;
 
 public class ChickenMeat extends Ingredient {
 

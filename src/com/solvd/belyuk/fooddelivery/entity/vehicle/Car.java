@@ -4,7 +4,7 @@ import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Car extends Vehicle implements IDoService {
+public class Car extends Vehicle implements IDoCarService {
 
     private static final Logger LOGGER = LogManager.getLogger(Car.class);
 
@@ -15,13 +15,18 @@ public class Car extends Vehicle implements IDoService {
     private int fuelConsumption;
     private int odometerCurrent;
     private int nextOilService;
-    private boolean oilChanged;
     private int nextAirFilterService;
+    private boolean oilChanged;
     private boolean airFilterChanged;
 
     public Car(String brand, int nextOilService) {
         super(brand);
         this.nextOilService = nextOilService;
+    }
+
+    @Override
+    public void replace(SparePart sparePart) {
+        LOGGER.info(sparePart.getClass().getName() + " " + sparePart.getBrand() + " has been replaced.");
     }
 
     @Override
@@ -35,7 +40,7 @@ public class Car extends Vehicle implements IDoService {
             throw new TooBigValueException("Odometer value is out of permitted bounds.");
         }
         if (index <= 0.93) {
-            LOGGER.info("Oil change is not needed.");
+            LOGGER.info("Oil replace is not needed.");
         } else if (index > 0.93 && index <= 1.03) {
             LOGGER.info("Oil needs to be changed.");
 
@@ -45,13 +50,13 @@ public class Car extends Vehicle implements IDoService {
     }
 
     @Override
-    public void changeAirFilter() {
+    public void checkIfAirFilterChangeNeeded() {
         if (airFilterChanged) {
             setNextOilService(this.nextAirFilterService + AIR_FILTER_SERVICE_PERIOD);
         }
         double index = getOdometerCurrent() / (double) getNextAirFilterService();
         if (index <= 0.93) {
-            LOGGER.info("Air filter change is not needed.");
+            LOGGER.info("Air filter replace is not needed.");
         } else if (index > 0.93 && index <= 1.03) {
             LOGGER.info("Air filter needs to be changed.");
         } else {
