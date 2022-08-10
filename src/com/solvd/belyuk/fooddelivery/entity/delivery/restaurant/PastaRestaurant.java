@@ -1,6 +1,6 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant;
 
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 
 import java.util.List;
 

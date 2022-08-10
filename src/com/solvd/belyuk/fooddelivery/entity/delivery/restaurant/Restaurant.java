@@ -1,7 +1,7 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant;
 
 import com.solvd.belyuk.fooddelivery.entity.delivery.ICountQuantity;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

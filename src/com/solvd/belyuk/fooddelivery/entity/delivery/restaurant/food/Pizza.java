@@ -1,4 +1,4 @@
-package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish;
+package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food;
 
 public class Pizza extends Dish {
 

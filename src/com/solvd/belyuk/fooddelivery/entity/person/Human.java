@@ -8,10 +8,10 @@ import java.time.LocalDateTime;
 
 public abstract class Human<T extends Vehicle> implements ICountTimePeriod {
 
-    private Address address;
     private LocalDate dateOfBirth;
+    private Address address;
     private String name;
-    private T t;
+    private T vehicle;
 
     public Human(String name, LocalDate dateOfBirth) {
         this.name = name;
@@ -62,12 +62,12 @@ public abstract class Human<T extends Vehicle> implements ICountTimePeriod {
         this.address = address;
     }
 
-    public T getT() {
-        return t;
+    public T getVehicle() {
+        return vehicle;
     }
 
-    public void setT(T t) {
-        this.t = t;
+    public void setVehicle(T vehicle) {
+        this.vehicle = vehicle;
     }
 
     @Override
@@ -80,7 +80,7 @@ public abstract class Human<T extends Vehicle> implements ICountTimePeriod {
         if (address != null ? !address.equals(human.address) : human.address != null) return false;
         if (dateOfBirth != null ? !dateOfBirth.equals(human.dateOfBirth) : human.dateOfBirth != null) return false;
         if (name != null ? !name.equals(human.name) : human.name != null) return false;
-        return t != null ? t.equals(human.t) : human.t == null;
+        return vehicle != null ? vehicle.equals(human.vehicle) : human.vehicle == null;
     }
 
     @Override
@@ -88,7 +88,7 @@ public abstract class Human<T extends Vehicle> implements ICountTimePeriod {
         int result = address != null ? address.hashCode() : 0;
         result = 31 * result + (dateOfBirth != null ? dateOfBirth.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (t != null ? t.hashCode() : 0);
+        result = 31 * result + (vehicle != null ? vehicle.hashCode() : 0);
         return result;
     }
 
@@ -98,7 +98,7 @@ public abstract class Human<T extends Vehicle> implements ICountTimePeriod {
         sb.append("address=").append(address);
         sb.append(", dateOfBirth=").append(dateOfBirth);
         sb.append(", name='").append(name).append('\'');
-        sb.append(", t=").append(t);
+        sb.append(", vehicle=").append(vehicle);
         sb.append('}');
         return sb.toString();
     }

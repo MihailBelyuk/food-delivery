@@ -3,13 +3,12 @@ package com.solvd.belyuk.fooddelivery.service;
 import com.solvd.belyuk.fooddelivery.entity.delivery.order.Payment;
 import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.FastFoodRestaurant;
 import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.FriedChicken;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Hamburger;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Pizza;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.ingredient.*;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.FriedChicken;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Hamburger;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Pizza;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.ingredient.*;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
-import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -23,13 +22,13 @@ import static java.time.Month.*;
 
 public class Creator {
 
-    public static List<Courier<CourierType>> createCouriers() {
-        List<Courier<CourierType>> couriers = new ArrayList<>();
-        Courier<CourierType> andrey = new Courier<>("Andrey", LocalDate.of(1990, JANUARY, 2));
+    public static List<Courier> createCouriers() {
+        List<Courier> couriers = new ArrayList<>();
+        Courier andrey = new Courier("Andrey", LocalDate.of(1990, JANUARY, 2));
         andrey.setCourierType(CAR);
-        Courier<CourierType> vasia = new Courier<>("Vasia", LocalDate.of(1991, MARCH, 3));
+        Courier vasia = new Courier("Vasia", LocalDate.of(1991, MARCH, 3));
         vasia.setCourierType(ON_FOOT);
-        Courier<CourierType> petya = new Courier<>("Petya", LocalDate.of(1992, APRIL, 4));
+        Courier petya = new Courier("Petya", LocalDate.of(1992, APRIL, 4));
         petya.setCourierType(BICYCLE);
         couriers.add(andrey);
         couriers.add(vasia);

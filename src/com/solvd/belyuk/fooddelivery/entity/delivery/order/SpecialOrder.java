@@ -1,9 +1,8 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.order;
 
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
-import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -13,7 +12,7 @@ public class SpecialOrder extends Order {
 
     private int vipClientDiscount;
 
-    public SpecialOrder(Courier<CourierType> courier, Client client, int deliveryDistance) {
+    public SpecialOrder(Courier courier, Client client, int deliveryDistance) {
         super(courier, client, deliveryDistance);
     }
 

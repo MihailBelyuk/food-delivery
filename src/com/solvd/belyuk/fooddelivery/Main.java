@@ -5,14 +5,12 @@ import com.solvd.belyuk.fooddelivery.entity.delivery.Delivery;
 import com.solvd.belyuk.fooddelivery.entity.delivery.order.GeneralOrder;
 import com.solvd.belyuk.fooddelivery.entity.delivery.order.Order;
 import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.ingredient.Ingredient;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.ingredient.Ingredient;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
-import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 import com.solvd.belyuk.fooddelivery.entity.person.Employee;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.Car;
-import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.WvGolf;
 import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 import com.solvd.belyuk.fooddelivery.service.*;
@@ -56,8 +54,8 @@ public class Main {
 
         Client client = new Client("Hugh Laurie", LocalDate.of(1959, 6, 11));
         client.setId(5);
-        client.setT(lancer);
-        LOGGER.info("Show client vehicle: " + client.getT().getBrand());
+        client.setVehicle(lancer);
+        LOGGER.info("Show client vehicle: " + client.getVehicle().getBrand());
 
         Address address = new Address();
         address.setCity("Minsk");
@@ -76,7 +74,7 @@ public class Main {
         orderDishes.add(dish1);
         orderDishes.add(dish2);
 
-        Courier<CourierType> courier = delivery.getCouriers().get(1);
+        Courier courier = delivery.getCouriers().get(1);
         courier.setCar(new WvGolf("WV Golf", 30_000));
         Car car = courier.getCar();
         car.setOdometerCurrent(1000_000_000);
@@ -111,7 +109,7 @@ public class Main {
         LOGGER.info("Client age: " + ClientService.countAge(client));
         LOGGER.info("Order price with discount: " + order.countOrderPriceWithDiscount(order.getDishes()));
 
-        Employee employee = new Courier<Vehicle>("Zhenya", LocalDate.of(2000, 4, 19));
+        Employee employee = new Courier("Zhenya", LocalDate.of(2000, 4, 19));
         employee.setHiringDate(LocalDate.of(2020, 5, 12));
         LOGGER.info("Working period: " + employee.countWorkingPeriod());
 

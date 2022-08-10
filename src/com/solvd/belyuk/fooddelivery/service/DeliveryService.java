@@ -3,10 +3,9 @@ package com.solvd.belyuk.fooddelivery.service;
 import com.solvd.belyuk.fooddelivery.entity.delivery.Delivery;
 import com.solvd.belyuk.fooddelivery.entity.delivery.ICountQuantity;
 import com.solvd.belyuk.fooddelivery.entity.delivery.order.Order;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
-import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 import com.solvd.belyuk.fooddelivery.entity.person.Human;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
 import com.solvd.belyuk.fooddelivery.exception.NegativeQuantityException;
@@ -26,7 +25,7 @@ public class DeliveryService {
     public static double countDeliveryTime(Delivery delivery) {
         List<Order> orders = delivery.getOrders();
         Order order = orders.get(0);
-        Courier<CourierType> courier = order.getCourier();
+        Courier courier = order.getCourier();
         Client client = order.getClient();
         int courierSpeed = CourierService.adjustCourierSpeed(courier.getCourierType());
         double clientDistance = OrderService.showDeliveryDistance(client.getAddress());

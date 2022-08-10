@@ -1,9 +1,8 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.order;
 
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
-import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 import com.solvd.belyuk.fooddelivery.exception.NegativePriceValueException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,7 +15,7 @@ public class GeneralOrder extends Order {
 
     private static final Logger LOGGER = LogManager.getLogger(GeneralOrder.class);
 
-    public GeneralOrder(Courier<CourierType> courier, Client client, int deliveryDistance) {
+    public GeneralOrder(Courier courier, Client client, int deliveryDistance) {
         super(courier, client, deliveryDistance);
     }
 

@@ -1,10 +1,9 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.order;
 
 import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dish.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
-import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -14,7 +13,7 @@ public abstract class Order {
 
     private static long orderNumber;
 
-    private Courier<CourierType> courier;
+    private Courier courier;
     private Client client;
     private List<Dish> dishes;
     private Restaurant restaurant;
@@ -23,7 +22,7 @@ public abstract class Order {
     private int deliveryDistance;
     private int discount;
 
-    public Order(Courier<CourierType> courier,
+    public Order(Courier courier,
                  Client client,
                  int deliveryDistance) {
         this.courier = courier;
@@ -56,11 +55,11 @@ public abstract class Order {
         return orderNumber;
     }
 
-    public Courier<CourierType> getCourier() {
+    public Courier getCourier() {
         return courier;
     }
 
-    public void setCourier(Courier<CourierType> courier) {
+    public void setCourier(Courier courier) {
         this.courier = courier;
     }
 

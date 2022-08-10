@@ -5,7 +5,6 @@ import com.solvd.belyuk.fooddelivery.entity.delivery.order.Order;
 import com.solvd.belyuk.fooddelivery.entity.delivery.order.Payment;
 import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
-import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
 import com.solvd.belyuk.fooddelivery.entity.person.Director;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.Map;
 public class Delivery implements ICountQuantity {
 
     private Map<String, Restaurant> restaurants;
-    private List<Courier<CourierType>> couriers;
+    private List<Courier> couriers;
     private List<Payment> payments;
     private List<Order> orders;
     private Address address;
@@ -33,11 +32,11 @@ public class Delivery implements ICountQuantity {
         this.restaurants = restaurants;
     }
 
-    public List<Courier<CourierType>> getCouriers() {
+    public List<Courier> getCouriers() {
         return couriers;
     }
 
-    public void setCouriers(List<Courier<CourierType>> couriers) {
+    public void setCouriers(List<Courier> couriers) {
         this.couriers = couriers;
     }
 

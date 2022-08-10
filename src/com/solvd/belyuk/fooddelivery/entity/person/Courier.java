@@ -4,7 +4,7 @@ import com.solvd.belyuk.fooddelivery.entity.vehicle.Car;
 
 import java.time.LocalDate;
 
-public class Courier<CourierType> extends Employee {
+public class Courier extends Employee {
 
     private CourierType courierType;
     private Car car;
@@ -35,7 +35,7 @@ public class Courier<CourierType> extends Employee {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
-        Courier<?> courier = (Courier<?>) o;
+        Courier courier = (Courier) o;
 
         if (courierType != null ? !courierType.equals(courier.courierType) : courier.courierType != null) return false;
         return car != null ? car.equals(courier.car) : courier.car == null;
