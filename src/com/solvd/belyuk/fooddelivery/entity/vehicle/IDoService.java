@@ -1,7 +1,7 @@
 package com.solvd.belyuk.fooddelivery.entity.vehicle;
 
-public interface IDoService<T extends SparePart> {
+public interface IDoService<P extends SparePart> {
 
-    void replace(T t);
+    void replace(P sparePart);
 
 }

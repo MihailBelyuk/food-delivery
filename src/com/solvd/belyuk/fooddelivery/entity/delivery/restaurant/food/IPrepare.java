@@ -1,7 +1,7 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food;
 
-public interface IPrepare<T extends Food> {
+public interface IPrepare<F extends Food> {
 
-    void prepare(T food);
+    void prepare(F food);
 
 }

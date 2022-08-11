@@ -6,12 +6,12 @@ import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public abstract class Human<T extends Vehicle> implements ICountTimePeriod {
+public abstract class Human<V extends Vehicle> implements ICountTimePeriod {
 
     private LocalDate dateOfBirth;
     private Address address;
     private String name;
-    private T vehicle;
+    private V vehicle;
 
     public Human(String name, LocalDate dateOfBirth) {
         this.name = name;
@@ -62,11 +62,11 @@ public abstract class Human<T extends Vehicle> implements ICountTimePeriod {
         this.address = address;
     }
 
-    public T getVehicle() {
+    public V getVehicle() {
         return vehicle;
     }
 
-    public void setVehicle(T vehicle) {
+    public void setVehicle(V vehicle) {
         this.vehicle = vehicle;
     }
 
