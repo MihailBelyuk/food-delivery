@@ -28,6 +28,11 @@ public class Dish extends Food implements ICook {
         }
     }
 
+    @Override
+    public void prepare(Food food) {
+
+    }
+
 
     public int getDishQuantity() {
         return dishQuantity;
