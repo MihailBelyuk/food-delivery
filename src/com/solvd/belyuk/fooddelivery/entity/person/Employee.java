@@ -1,11 +1,11 @@
 package com.solvd.belyuk.fooddelivery.entity.person;
 
-import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
+import com.solvd.belyuk.fooddelivery.entity.vehicle.CivilVehicle;
 
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Employee extends Human<Vehicle> {
+public class Employee extends Human<CivilVehicle> {
 
     private LocalDate hiringDate;
     private long employeeId;

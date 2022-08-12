@@ -18,9 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
@@ -54,8 +52,8 @@ public class Main {
 
         Client client = new Client("Hugh Laurie", LocalDate.of(1959, 6, 11));
         client.setId(5);
-        client.setVehicle(lancer);
-        LOGGER.info("Show client vehicle: " + client.getVehicle().getBrand());
+        client.setCivilVehicle(lancer);
+        LOGGER.info("Show client vehicle: " + client.getCivilVehicle().getBrand());
 
         Address address = new Address();
         address.setCity("Minsk");
@@ -134,8 +132,25 @@ public class Main {
 
         Car wrx = new Car("Subaru WRX STI", 20_000);
         Car skyline = new Car("Nissan Skyline", 10_000);
+
+        Set<Car> carSet = new HashSet<>();
+        carSet.add(lancer);
+        carSet.add(wrx);
+        carSet.add(skyline);
+        LOGGER.info("Cars in set: ");
+        for (Car c : carSet) {
+            LOGGER.info(c.getBrand());
+        }
+
+        carSet.add(lancer);
+        Iterator<Car> iterator = carSet.iterator();
+        LOGGER.info("Car set with one more (same config) lancer added: ");
+        while (iterator.hasNext()) {
+            LOGGER.info(iterator.next().getBrand());
+        }
     }
 }
+
 
 
 

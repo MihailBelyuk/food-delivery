@@ -1,7 +1,9 @@
 package com.solvd.belyuk.fooddelivery.entity.vehicle;
 
-public interface IDoService<P extends SparePart> {
+import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 
-    void replace(P sparePart);
+public interface IDoService extends IReplace<SparePart>{
+
+    void change() throws TooBigValueException;
 
 }

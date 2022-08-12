@@ -2,10 +2,10 @@ package com.solvd.belyuk.fooddelivery.entity.vehicle;
 
 import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 
-public interface IDoCarService extends IDoService<SparePart> {
+public interface IDoCarService extends IDoService{
 
-    void changeOil() throws TooBigValueException;
+    boolean checkIfEngineOilChangeNeeded() throws TooBigValueException;
 
-    void checkIfAirFilterChangeNeeded();
+    boolean checkIfAirFilterReplacementNeeded();
 
 }

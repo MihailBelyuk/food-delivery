@@ -7,7 +7,7 @@ import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
 import com.solvd.belyuk.fooddelivery.entity.person.Human;
-import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
+import com.solvd.belyuk.fooddelivery.entity.vehicle.CivilVehicle;
 import com.solvd.belyuk.fooddelivery.exception.NegativeQuantityException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,7 +48,7 @@ public class DeliveryService {
         return orderPrice.setScale(2, RoundingMode.CEILING);
     }
 
-    public static void showPersonInfo(Human<Vehicle> human) {
+    public static void showPersonInfo(Human<CivilVehicle> human) {
         LOGGER.info(human.getName() + " " + human.getDateOfBirth().toString());
     }
 

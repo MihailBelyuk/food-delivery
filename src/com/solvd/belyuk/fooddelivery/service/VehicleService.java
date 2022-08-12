@@ -9,11 +9,11 @@ import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 public class VehicleService {
 
     public static void changeOil(IDoCarService iDoService) throws TooBigValueException {
-        iDoService.changeOil();
+        iDoService.checkIfEngineOilChangeNeeded();
     }
 
     public static void checkAirFilter(IDoCarService iDoService) {
-        iDoService.checkIfAirFilterChangeNeeded();
+        iDoService.checkIfAirFilterReplacementNeeded();
     }
 
     public static void checkIfRepairIsNeeded(IRepair iRepair) {

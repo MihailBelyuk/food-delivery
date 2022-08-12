@@ -4,7 +4,7 @@ import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Car extends Vehicle implements IDoCarService {
+public class Car extends CivilVehicle implements IDoCarService, IDoCarRepair {
 
     private static final Logger LOGGER = LogManager.getLogger(Car.class);
 
@@ -30,7 +30,7 @@ public class Car extends Vehicle implements IDoCarService {
     }
 
     @Override
-    public void changeOil() throws TooBigValueException {
+    public boolean checkIfEngineOilChangeNeeded() throws TooBigValueException {
         if (oilChanged) {
             setNextOilService(this.nextOilService + OIL_SERVICE_PERIOD);
         }
@@ -41,26 +41,43 @@ public class Car extends Vehicle implements IDoCarService {
         }
         if (index <= 0.93) {
             LOGGER.info("Oil replace is not needed.");
+            return false;
         } else if (index > 0.93 && index <= 1.03) {
             LOGGER.info("Oil needs to be changed.");
-
+            return true;
         } else {
             LOGGER.info("Change oil as soon as possible.");
+            return true;
         }
     }
 
     @Override
-    public void checkIfAirFilterChangeNeeded() {
+    public boolean checkIfAirFilterReplacementNeeded() {
         if (airFilterChanged) {
             setNextOilService(this.nextAirFilterService + AIR_FILTER_SERVICE_PERIOD);
         }
         double index = getOdometerCurrent() / (double) getNextAirFilterService();
         if (index <= 0.93) {
             LOGGER.info("Air filter replace is not needed.");
+            return false;
         } else if (index > 0.93 && index <= 1.03) {
             LOGGER.info("Air filter needs to be changed.");
+            return true;
         } else {
             LOGGER.info("Change air filter as soon as possible.");
+            return true;
+        }
+    }
+
+    @Override
+    public void repairEngine() {
+        LOGGER.info("Engine repair has been done");
+    }
+
+    @Override
+    public void change() throws TooBigValueException {
+        if (checkIfEngineOilChangeNeeded()) {
+            LOGGER.info("Air filter has been changed.");
         }
     }
 

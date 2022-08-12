@@ -22,9 +22,9 @@ public class Dish extends Food implements ICook {
     public void cook() {
         List<Ingredient> ingredients = getIngredients();
         if (!ingredients.iterator().next().isPresent()) {
-            LOGGER.info("There is/are no " + ingredients.iterator().next().getName() + " to prepare the " + getName());
+            LOGGER.info("There is/are no " + ingredients.iterator().next().getName() + " to cook the " + getName());
         } else {
-            LOGGER.info(getDishQuantity() + " " + getName() + " is/are prepared.");
+            LOGGER.info(getDishQuantity() + " " + getName() + " is/are cooked.");
         }
     }
 
