@@ -1,29 +1,23 @@
 package com.solvd.belyuk.fooddelivery.service;
 
+import com.solvd.belyuk.fooddelivery.entity.person.CourierType;
+
 public class CourierService {
 
-    public static int adjustCourierSpeed(String courierType) {
+    public static int adjustCourierSpeed(CourierType courierType) {
         int speed = 0;
         switch (courierType) {
-            case "bike":
+            case BICYCLE:
                 speed = 15;
                 break;
-            case "car":
+            case CAR:
                 speed = 60;
                 break;
-            case "walk":
+            case ON_FOOT:
                 speed = 5;
                 break;
             default:
                 break;
-        }
-        return speed;
-    }
-
-    public int adjustCourierSpeed(String courierType, String courierName) {
-        int speed = 0;
-        if ("Dima".equals(courierName) && "car".equals(courierType)) {
-            speed = 50;
         }
         return speed;
     }

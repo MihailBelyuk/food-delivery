@@ -1,15 +1,17 @@
 package com.solvd.belyuk.fooddelivery.entity.person;
 
 import com.solvd.belyuk.fooddelivery.entity.Address;
+import com.solvd.belyuk.fooddelivery.entity.vehicle.CivilVehicle;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public abstract class Human implements ICountTimePeriod {
+public abstract class Human<CV extends CivilVehicle> implements ICountTimePeriod {
 
-    private Address address;
     private LocalDate dateOfBirth;
+    private Address address;
     private String name;
+    private CV civilVehicle;
 
     public Human(String name, LocalDate dateOfBirth) {
         this.name = name;
@@ -60,32 +62,43 @@ public abstract class Human implements ICountTimePeriod {
         this.address = address;
     }
 
+    public CV getCivilVehicle() {
+        return civilVehicle;
+    }
+
+    public void setCivilVehicle(CV civilVehicle) {
+        this.civilVehicle = civilVehicle;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Human human = (Human) o;
+        Human<?> human = (Human<?>) o;
 
-        if (name != null ? !name.equals(human.name) : human.name != null) return false;
+        if (address != null ? !address.equals(human.address) : human.address != null) return false;
         if (dateOfBirth != null ? !dateOfBirth.equals(human.dateOfBirth) : human.dateOfBirth != null) return false;
-        return address != null ? address.equals(human.address) : human.address == null;
+        if (name != null ? !name.equals(human.name) : human.name != null) return false;
+        return civilVehicle != null ? civilVehicle.equals(human.civilVehicle) : human.civilVehicle == null;
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = address != null ? address.hashCode() : 0;
         result = 31 * result + (dateOfBirth != null ? dateOfBirth.hashCode() : 0);
-        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (civilVehicle != null ? civilVehicle.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Human{");
-        sb.append("name='").append(name).append('\'');
+        sb.append("address=").append(address);
         sb.append(", dateOfBirth=").append(dateOfBirth);
-        sb.append(", address=").append(address);
+        sb.append(", name='").append(name).append('\'');
+        sb.append(", vehicle=").append(civilVehicle);
         sb.append('}');
         return sb.toString();
     }

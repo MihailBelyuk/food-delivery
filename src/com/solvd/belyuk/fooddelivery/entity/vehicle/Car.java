@@ -4,7 +4,7 @@ import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Car extends Vehicle implements IDoService {
+public class Car extends CivilVehicle implements IDoCarService, IDoCarRepair {
 
     private static final Logger LOGGER = LogManager.getLogger(Car.class);
 
@@ -15,8 +15,8 @@ public class Car extends Vehicle implements IDoService {
     private int fuelConsumption;
     private int odometerCurrent;
     private int nextOilService;
-    private boolean oilChanged;
     private int nextAirFilterService;
+    private boolean oilChanged;
     private boolean airFilterChanged;
 
     public Car(String brand, int nextOilService) {
@@ -25,7 +25,12 @@ public class Car extends Vehicle implements IDoService {
     }
 
     @Override
-    public void changeOil() throws TooBigValueException {
+    public void replace(SparePart sparePart) {
+        LOGGER.info(sparePart.getClass().getName() + " " + sparePart.getBrand() + " has been replaced.");
+    }
+
+    @Override
+    public boolean checkIfEngineOilChangeNeeded() throws TooBigValueException {
         if (oilChanged) {
             setNextOilService(this.nextOilService + OIL_SERVICE_PERIOD);
         }
@@ -35,27 +40,44 @@ public class Car extends Vehicle implements IDoService {
             throw new TooBigValueException("Odometer value is out of permitted bounds.");
         }
         if (index <= 0.93) {
-            LOGGER.info("Oil change is not needed.");
+            LOGGER.info("Oil replace is not needed.");
+            return false;
         } else if (index > 0.93 && index <= 1.03) {
             LOGGER.info("Oil needs to be changed.");
-
+            return true;
         } else {
             LOGGER.info("Change oil as soon as possible.");
+            return true;
         }
     }
 
     @Override
-    public void changeAirFilter() {
+    public boolean checkIfAirFilterReplacementNeeded() {
         if (airFilterChanged) {
             setNextOilService(this.nextAirFilterService + AIR_FILTER_SERVICE_PERIOD);
         }
         double index = getOdometerCurrent() / (double) getNextAirFilterService();
         if (index <= 0.93) {
-            LOGGER.info("Air filter change is not needed.");
+            LOGGER.info("Air filter replace is not needed.");
+            return false;
         } else if (index > 0.93 && index <= 1.03) {
             LOGGER.info("Air filter needs to be changed.");
+            return true;
         } else {
             LOGGER.info("Change air filter as soon as possible.");
+            return true;
+        }
+    }
+
+    @Override
+    public void repairEngine() {
+        LOGGER.info("Engine repair has been done");
+    }
+
+    @Override
+    public void change() throws TooBigValueException {
+        if (checkIfEngineOilChangeNeeded()) {
+            LOGGER.info("Air filter has been changed.");
         }
     }
 

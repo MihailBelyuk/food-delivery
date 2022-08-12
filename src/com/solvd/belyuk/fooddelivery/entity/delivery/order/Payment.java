@@ -2,7 +2,7 @@ package com.solvd.belyuk.fooddelivery.entity.delivery.order;
 
 public class Payment {
 
-    String paymentType;
+    private String paymentType;
 
     public String getPaymentType() {
         return paymentType;

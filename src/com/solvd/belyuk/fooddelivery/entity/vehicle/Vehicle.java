@@ -3,7 +3,7 @@ package com.solvd.belyuk.fooddelivery.entity.vehicle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public abstract class Vehicle implements IRepair {
+public abstract class Vehicle implements IRepair, IDoService {
 
     private static final Logger LOGGER = LogManager.getLogger(Vehicle.class);
 

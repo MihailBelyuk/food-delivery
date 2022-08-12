@@ -1,8 +1,24 @@
 package com.solvd.belyuk.fooddelivery.entity.vehicle;
 
-public class Bicycle extends Vehicle {
+import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+public class Bicycle extends CivilVehicle {
+
+    private static final Logger LOGGER = LogManager.getLogger(Bicycle.class);
 
     private String size;
+
+    @Override
+    public void replace(SparePart sparePart) {
+        LOGGER.info(sparePart.getClass().getName() + " " + sparePart.getBrand() + " has been replaced.");
+    }
+
+    @Override
+    public void change() throws TooBigValueException {
+
+    }
 
     public Bicycle(String brand) {
         super(brand);

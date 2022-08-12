@@ -1,6 +1,6 @@
 package com.solvd.belyuk.fooddelivery.entity.vehicle;
 
-public interface IRepair {
+public interface IRepair extends IReplace<SparePart>{
 
     void checkIfNeedsRepair();
 

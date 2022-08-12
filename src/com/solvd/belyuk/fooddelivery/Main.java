@@ -5,21 +5,20 @@ import com.solvd.belyuk.fooddelivery.entity.delivery.Delivery;
 import com.solvd.belyuk.fooddelivery.entity.delivery.order.GeneralOrder;
 import com.solvd.belyuk.fooddelivery.entity.delivery.order.Order;
 import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.Restaurant;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.ingredient.Ingredient;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.ingredient.Ingredient;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
 import com.solvd.belyuk.fooddelivery.entity.person.Employee;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.Car;
-import com.solvd.belyuk.fooddelivery.entity.vehicle.Vehicle;
 import com.solvd.belyuk.fooddelivery.entity.vehicle.WvGolf;
 import com.solvd.belyuk.fooddelivery.exception.TooBigValueException;
-import com.solvd.belyuk.fooddelivery.exception.WrongAgeException;
 import com.solvd.belyuk.fooddelivery.service.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
+import java.util.*;
 
 public class Main {
 
@@ -31,10 +30,31 @@ public class Main {
 
     public static void main(String[] args) {
         Delivery delivery = new Delivery();
-        delivery.setRestaurants(Creator.createFastFoodRestaurants());
+
+        Map<String, List<Ingredient>> ingredients = Creator.createIngredients();
+        for (Map.Entry<String, List<Ingredient>> entry : ingredients.entrySet()) {
+            List<Ingredient> ingredientsList = entry.getValue();
+            for (Ingredient ingredient : ingredientsList) {
+                ingredient.setPresent(true);
+            }
+        }
+
+        Map<String, List<Dish>> dishes = Creator.createDishes(ingredients);
+        delivery.setRestaurants(Creator.createFastFoodRestaurants(dishes));
         delivery.setCouriers(Creator.createCouriers());
 
+        Map<String, Restaurant> restaurantMap = delivery.getRestaurants();
+        LOGGER.info("Show entry set: " + restaurantMap.entrySet());
+        LOGGER.info("Show map keys: " + restaurantMap.keySet());
+
+        Car lancer = new Car("Mitsubishi Lancer EVO X", 15_000);
+        VehicleService.replaceWheel(lancer);
+
         Client client = new Client("Hugh Laurie", LocalDate.of(1959, 6, 11));
+        client.setId(5);
+        client.setCivilVehicle(lancer);
+        LOGGER.info("Show client vehicle: " + client.getCivilVehicle().getBrand());
+
         Address address = new Address();
         address.setCity("Minsk");
         address.setDistrict("Central");
@@ -42,20 +62,17 @@ public class Main {
         address.setHouseNumber("56");
         client.setAddress(address);
 
-        Restaurant restaurant = delivery.getRestaurants()[1];
+        Restaurant restaurant = delivery.getRestaurants().get("burger king");
 
-        Dish dish1 = restaurant.getDishes()[0];
+        List<Dish> orderDishes = new ArrayList<>();
+        Dish dish1 = restaurant.getDishes().get(1);
         dish1.setDishQuantity(2);
-        Ingredient[] ingredients1 = dish1.getIngredients();
-        ingredients1[0].setPresent(true);
-        ingredients1[1].setPresent(true);
-        Dish dish2 = restaurant.getDishes()[1];
+        Dish dish2 = restaurant.getDishes().get(0);
         dish2.setDishQuantity(5);
-        Ingredient[] ingredients2 = dish2.getIngredients();
-        ingredients2[0].setPresent(false);
-        Dish[] orderDishes = new Dish[]{dish1, dish2};
+        orderDishes.add(dish1);
+        orderDishes.add(dish2);
 
-        Courier courier = delivery.getCouriers()[0];
+        Courier courier = delivery.getCouriers().get(1);
         courier.setCar(new WvGolf("WV Golf", 30_000));
         Car car = courier.getCar();
         car.setOdometerCurrent(1000_000_000);
@@ -71,17 +88,18 @@ public class Main {
             car.setOdometerCurrent(odometerDefault);
         }
 
-        VehicleService.changeAirFilter(car);
+        VehicleService.checkAirFilter(car);
         VehicleService.checkIfRepairIsNeeded(car);
 
         int deliveryDistance = OrderService.showDeliveryDistance(client.getAddress());
 
+        List<Order> orders = new ArrayList<>();
         GeneralOrder order = new GeneralOrder(courier, client, deliveryDistance);
         order.setDiscount(30);
         order.setRestaurant(restaurant);
         order.setDishes(orderDishes);
+        orders.add(order);
 
-        Order[] orders = new Order[]{order};
         delivery.setOrders(orders);
 
         LOGGER.info("Order delivery time: " + DeliveryService.countDeliveryTime(delivery) + " minutes");
@@ -92,27 +110,47 @@ public class Main {
         Employee employee = new Courier("Zhenya", LocalDate.of(2000, 4, 19));
         employee.setHiringDate(LocalDate.of(2020, 5, 12));
         LOGGER.info("Working period: " + employee.countWorkingPeriod());
+
         DeliveryService.showPersonInfo(employee);
         DeliveryService.showPersonInfo(client);
 
         LOGGER.info("Number of couriers working in delivery." + DeliveryService.countCourierQuantity(delivery));
-
         LOGGER.info("Number of dishes in restaurant menu." + RestaurantService.countDishes(restaurant));
 
-        for (Dish meal : order.getRestaurant().getDishes()) {
+        List<Dish> dishes1 = order.getDishes();
+        for (Dish meal : dishes1) {
             RestaurantService.prepareDish(meal);
         }
 
-        try (TryWithResourceClass tryWithResource = new TryWithResourceClass()) {
-            tryWithResource.countMyAge(LocalDate.of(2020, 1, 20));
-        } catch (WrongAgeException e) {
-            LOGGER.error("Wrong age result.", e);
+        if (dishes.containsKey("burger king dishes")) {
+            dishes.get("burger king dishes").remove(0);
+            LOGGER.info("Dishes keySet after removal: " + dishes.keySet());
         }
-        Vehicle car2 = new Car("Mitsubishi Lancer EVO X", 15_000);
-        Vehicle car3 = new Car("Subaru WRX STI", 20_000);
-        Vehicle car4 = new Car("Nissan Skyline", 10_000);
+
+        restaurantMap.remove("kfc");
+        LOGGER.info("Restaurants left after removal: " + restaurantMap.values());
+
+        Car wrx = new Car("Subaru WRX STI", 20_000);
+        Car skyline = new Car("Nissan Skyline", 10_000);
+
+        Set<Car> carSet = new HashSet<>();
+        carSet.add(lancer);
+        carSet.add(wrx);
+        carSet.add(skyline);
+        LOGGER.info("Cars in set: ");
+        for (Car c : carSet) {
+            LOGGER.info(c.getBrand());
+        }
+
+        carSet.add(lancer);
+        Iterator<Car> iterator = carSet.iterator();
+        LOGGER.info("Car set with one more (same config) lancer added: ");
+        while (iterator.hasNext()) {
+            LOGGER.info(iterator.next().getBrand());
+        }
     }
 }
+
 
 
 

@@ -1,11 +1,12 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.order;
 
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.List;
 
 public class SpecialOrder extends Order {
 
@@ -16,7 +17,7 @@ public class SpecialOrder extends Order {
     }
 
     @Override
-    public BigDecimal countOrderPriceWithDiscount(Dish[] dishes) {
+    public BigDecimal countOrderPriceWithDiscount(List<Dish> dishes) {
         int totalDiscount = getDiscount() + getVipClientDiscount();
         BigDecimal orderPrice = new BigDecimal(0);
         for (Dish dish : dishes) {
@@ -42,9 +43,7 @@ public class SpecialOrder extends Order {
 
         SpecialOrder that = (SpecialOrder) o;
 
-        if (vipClientDiscount != that.vipClientDiscount) return false;
-
-        return true;
+        return vipClientDiscount == that.vipClientDiscount;
     }
 
     @Override

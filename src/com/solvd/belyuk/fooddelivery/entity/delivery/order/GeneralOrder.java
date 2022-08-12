@@ -1,6 +1,6 @@
 package com.solvd.belyuk.fooddelivery.entity.delivery.order;
 
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.Dish;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.Dish;
 import com.solvd.belyuk.fooddelivery.entity.person.Client;
 import com.solvd.belyuk.fooddelivery.entity.person.Courier;
 import com.solvd.belyuk.fooddelivery.exception.NegativePriceValueException;
@@ -9,6 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.List;
 
 public class GeneralOrder extends Order {
 
@@ -19,7 +20,7 @@ public class GeneralOrder extends Order {
     }
 
     @Override
-    public BigDecimal countOrderPriceWithDiscount(Dish[] dishes) {
+    public BigDecimal countOrderPriceWithDiscount(List<Dish> dishes) {
         BigDecimal orderPrice = new BigDecimal(0);
         for (Dish dish : dishes) {
             BigDecimal dishPrice = dish.getPrice().multiply(new BigDecimal(dish.getDishQuantity()));

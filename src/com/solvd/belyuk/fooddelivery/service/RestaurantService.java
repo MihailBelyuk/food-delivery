@@ -1,7 +1,7 @@
 package com.solvd.belyuk.fooddelivery.service;
 
 import com.solvd.belyuk.fooddelivery.entity.delivery.ICountQuantity;
-import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.dishtype.ICook;
+import com.solvd.belyuk.fooddelivery.entity.delivery.restaurant.food.ICook;
 
 public class RestaurantService {
 
